@@ -27,5 +27,6 @@ const isLeapYear = (year: number): boolean => {
 };
 
 console.log(twoFer("Eddie"));
+console.log(twoFer());
 console.log(isLeapYear(2012));
 console.log(isLeapYear(2013));

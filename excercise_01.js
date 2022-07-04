@@ -25,5 +25,6 @@ var isLeapYear = function (year) {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 };
 console.log(twoFer("Eddie"));
+console.log(twoFer());
 console.log(isLeapYear(2012));
 console.log(isLeapYear(2013));
