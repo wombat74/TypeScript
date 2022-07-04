@@ -60,3 +60,9 @@ function printTwice(msg: string): void {
   console.log(msg);
   console.log(msg);
 }
+
+// never is used to annotate a function that should never return a value, not even void
+function makeError(msg: string): never {
+  throw new Error(msg);
+  // return true; -- this will throw an error
+}
