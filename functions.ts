@@ -18,14 +18,14 @@ const doSomething = (person: string, age: number, isFunny: boolean) => {
 };
 
 doSomething("Eddie", 45, false);
-doSomething("Joanne", 34);
+//doSomething("Joanne", 34);
 
 // default value
 function greet(person: string = "Stranger") {
   return "Hi there, ${person}!";
 }
 
-greet(3);
+//greet(3);
 greet();
 greet("Tony");
 
