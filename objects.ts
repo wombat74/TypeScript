@@ -23,21 +23,21 @@ printName({ first: "Eddie", last: "Gonzalez" });
 
 // typing variables
 // set a type Alias to establish a patter to be used in multiple functions/variable assignments
-type Point = {
-  x: number;
-  y: number;
-};
+// type Point = {
+//   x: number;
+//   y: number;
+// };
 
-let coordinate: Point = { x: 34, y: 2 };
+// let coordinate: Point = { x: 34, y: 2 };
 
-// annotate return type of a function
-function randomCoordinate(): Point {
-  return { x: Math.random(), y: Math.random() };
-}
+// // annotate return type of a function
+// function randomCoordinate(): Point {
+//   return { x: Math.random(), y: Math.random() };
+// }
 
-function doublePoint(point: Point): Point {
-  return { x: point.x * 2, y: point.y * 2 };
-}
+// function doublePoint(point: Point): Point {
+//   return { x: point.x * 2, y: point.y * 2 };
+// }
 
 // nested function annotation
 type Song = {
@@ -71,3 +71,61 @@ const mySong: Song = {
 const earnings = calculatePayout(mySong);
 console.log(earnings);
 printSong(mySong);
+
+// object with optional parameter
+type Point = {
+  x: number;
+  y: number;
+  z?: number; // the ? makes this property optional
+};
+
+const myPoint: Point = { x: 1, y: 2 };
+
+// read only properties
+type User = {
+  readonly id: number;
+  username: string;
+};
+
+const user: User = {
+  id: 21312,
+  username: "catgirl",
+};
+
+console.log(user.id);
+// user.id = 324234; // cannot set the property as it is read only
+
+// intersection types
+type Circle = {
+  radius: number;
+};
+
+type Colorful = {
+  color: string;
+};
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+  radius: 4,
+  color: "Yellow",
+};
+
+type Cat = {
+  numLives: number;
+};
+
+type Dog = {
+  breed: string;
+};
+
+type CatDog = Cat &
+  Dog & {
+    age: number;
+  };
+
+const christy: CatDog = {
+  numLives: 8,
+  breed: "husky",
+  age: 9,
+};
