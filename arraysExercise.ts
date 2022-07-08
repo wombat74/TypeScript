@@ -35,6 +35,7 @@ const allProducts: Product[] = [
   { name: "macbook pro", price: 2000 },
   { name: "iPhone", price: 1000 },
   { name: "iPad Pro", price: 2100 },
+  { name: "apple watch", price: 450}
 ];
 
 // function getTotal(product: Product[]): number {
