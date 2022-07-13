@@ -32,3 +32,26 @@ function calculateTax(price: number | string, tax: number) {
   }
   return price * tax;
 }
+
+//const stuff: any[] = [1,2,3,true,"asds"];
+
+const stuff: (number | string)[] = [1, 2, 3, "eddie"]; // array that can hold multiple types.
+
+const locations: (Pointer | Loc)[] = [];
+locations.push({ x: 123, y: 23423 });
+locations.push({ lat: 123, long: 23423 });
+
+// literal types
+let zero: 0 = 0;
+//zero = 2;
+
+type DayOfWeek =
+  | "Monday"
+  | "Tuesday"
+  | "Wednesday"
+  | "Thursday"
+  | "Friday"
+  | "Saturday"
+  | "Sunday";
+
+let myDay: DayOfWeek = "Monday";
