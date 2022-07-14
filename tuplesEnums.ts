@@ -30,3 +30,5 @@ const myStatus = OrderStatus.DELIVERED;
 function isDelivered(myStatus: OrderStatus) {
   return myStatus === OrderStatus.DELIVERED;
 }
+
+isDelivered(OrderStatus.RETURNED);
